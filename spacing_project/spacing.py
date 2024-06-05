@@ -1,8 +1,8 @@
-print('Running Script')
+
 # debug = True
 debug = False
 
-test_list = [['apple','banana','carrot'],['date','egg','fruitcake']]
+# test_list = [['apple','banana','carrot'],['date','egg','fruitcake']]
 
 def getMaxSpacing(input_list, position = 0):
 	'''
@@ -25,9 +25,8 @@ def getMaxSpacing(input_list, position = 0):
 	assert len(input_list[0]) > 0, 'input_list elements can not be empty lists'
 
 	row_count =  len(input_list)
-	if debug:
-		print(f'row_count: {row_count}')
 	
-getMaxSpacing(test_list)
+	return row_count
 
-print('Finished Script')
+# if __name__ == 
+# getMaxSpacing(test_list)
