@@ -2,8 +2,6 @@
 # debug = True
 debug = False
 
-# test_list = [['apple','banana','carrot'],['date','egg','fruitcake']]
-
 def getMaxSpacing(input_list, position = 0):
 	'''
 	returns the max length from the input_list at the given position
@@ -25,8 +23,5 @@ def getMaxSpacing(input_list, position = 0):
 	assert len(input_list[0]) > 0, 'input_list elements can not be empty lists'
 
 	row_count =  len(input_list)
-	
-	return row_count
 
-# if __name__ == 
-# getMaxSpacing(test_list)
+	return row_count
