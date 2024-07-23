@@ -48,7 +48,7 @@ def getAllMaxSpacing(input_list):
 def addSpacing(input_list,add_char = ' '):
 	string_list = []
 	spacing_list = getAllMaxSpacing(test_list)
-	additional_spacing = add_char * 2
+	additional_spacing = add_char * 2 + ' '
 	row_count =  len(input_list)
 	col_count = len(input_list[0])
 
@@ -63,9 +63,9 @@ def addSpacing(input_list,add_char = ' '):
 			temp_val = input_list[i][j]
 			temp_val_len = len(temp_val)
 			if temp_val_len < spacing_list[j]:
-				temp_string += temp_val + add_char * (spacing_list[j] - temp_val_len)
+				temp_string += temp_val + ' ' + add_char * (spacing_list[j] - temp_val_len)
 			else:
-				temp_string += temp_val
+				temp_string += temp_val + ' '
 		string_list.append(temp_string)
 
 	return string_list
@@ -75,7 +75,7 @@ def addSpacing(input_list,add_char = ' '):
 
 # print(getAllMaxSpacing(test_list))
 
-print(addSpacing(test_list))
+print(addSpacing(test_list,'-'))
 
 
 # apple--banana--carrot---
@@ -83,3 +83,8 @@ print(addSpacing(test_list))
 
 # apple  banana  carrot
 # date   egg     fruitcake
+
+'''
+apple -- banana -- carrot ---
+date --- egg ----- fruitcake 
+'''
